@@ -8,13 +8,13 @@ match priority:
             reminder = f"'{task}' is a high priority task that requires immediate attention today!"
         else:
             reminder = f"'{task}' is a high priority task. Consider completing it when you have free time."
-        print(f"Reminder: {reminder}")
+        print("Reminder: ", reminder)
     case "medium":
         if time_bound == "yes":
             reminder = f"'{task}' is a medium priority task that requires immediate attention today!"
         else:
             reminder = f"'{task}' is a medium priority task. Consider completing it when you have free time."
-        print(f"Reminder: {reminder}")
+        print("Reminder: ", reminder)
 
     case "low":
         if time_bound == "yes":
@@ -22,4 +22,4 @@ match priority:
 
         else:
             reminder = f"'{task}' is a low priority task. Consider completing it when you have free time."
-        print(f"Reminder: {reminder}")
+        print("Reminder: ", reminder)
