@@ -9,7 +9,7 @@ def perform_operation(num1, num2, operation):
             result = num1 * num2
         case "divide":
             if num2 == 0:
-                print("cant divide by zero")
+                print("can't divide by zero")
             else:
                 result = num1 / num2
     return float(result)
