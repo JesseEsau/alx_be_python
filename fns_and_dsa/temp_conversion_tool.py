@@ -23,4 +23,4 @@ match unit:
         print(
             f"{temperature}{chr(176)}F is {convert_to_celsius(temperature)}{chr(176)}C")
     case _:
-        print("invalid temperature. Please enter a numeric value.")
+        print("Invalid temperature. Please enter a numeric value.")
