@@ -2,9 +2,9 @@ from datetime import datetime, timedelta
 
 
 def display_current_datetime():
-    current_date = datetime.now()
-    print(
-        f"Current date and time: {current_date.year}-{current_date.month}-{current_date.day} {current_date.hour}:{current_date.minute}:{current_date.second}")
+    now = datetime.now()
+    current_date = now.strftime("%Y-%m-%d %H:%M:%S")
+    print(current_date)
 
 
 number_of_days = int(
