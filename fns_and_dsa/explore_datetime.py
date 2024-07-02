@@ -15,5 +15,5 @@ def calculate_future_date():
     current_date = datetime.now()
     to_be_added = timedelta(days=number_of_days)
     future_date = current_date + to_be_added
-    print(
-        f"Future date: {future_date.year}-{future_date.month}-{future_date.day}")
+    future_date = future_date.strftime("%Y-%m-%d")
+    print(future_date)
