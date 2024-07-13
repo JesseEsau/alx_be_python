@@ -9,6 +9,7 @@ class Book:
         for book in self._books:
             if book.title == self.title:
                 book._is_checked_out = True
+                return book._is_checked_out
 
     def return_book(self, title):
         self.book = title
