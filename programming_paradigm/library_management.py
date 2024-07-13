@@ -15,6 +15,7 @@ class Book:
         for book in self._books:
             if book.title == self.title:
                 book._is_checked_out = False
+                return book._is_checked_out
 
 
 class Library(Book):
