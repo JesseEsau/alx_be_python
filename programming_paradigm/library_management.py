@@ -7,19 +7,18 @@ class Book:
     def check_out_book(self, title):
         self.title = title
         for book in self._books:
-            if book.title == self.title:
+            if book.title == title and not book._is_checked_out:
                 book._is_checked_out = True
-                return book._is_checked_out
+            elif book.title != title or book._is_checked_out:
+                print("This book is not available!")
 
-    def return_book(self, title):
-        self.book = title
+    def return_book(self):
         for book in self._books:
-            if book.title == self.title:
+            if book.title and book._is_checked_out:
                 book._is_checked_out = False
-                return book._is_checked_out
 
 
-class Library(Book):
+class Library():
     def __init__(self):
         self._books = []
 
@@ -28,5 +27,18 @@ class Library(Book):
 
     def list_available_books(self):
         for book in self._books:
-            if book._is_checked_out == False:
+            if not book._is_checked_out:
                 print(f"{book.title} {book.author}")
+
+    def check_out_book(self, title):
+        self.title = title
+        for book in self._books:
+            if book.title == title and not book._is_checked_out:
+                book._is_checked_out = True
+            elif book.title != title or book._is_checked_out:
+                print("This book is not available!")
+
+    def return_book(self, title):
+        for book in self._books:
+            if book.title == title and book._is_checked_out:
+                book._is_checked_out = False
